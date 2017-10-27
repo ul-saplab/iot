@@ -1,0 +1,44 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="pruebaIOT.controller.View1" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table id="table0" items="{/SYSTEM.T_IOT_85DDE182247A31FA3680?$top=2}">
+						<columns>
+							<Column id="column0">
+								<header>
+									<Label id="TimeStamp" text="Timestamp"/>
+								</header>
+							</Column>
+							<Column id="column1">
+								<header>
+									<Label id="ID" text="SLOT"/>
+								</header>
+							</Column>
+							<Column id="column2">
+								<header>
+									<Label id="State" text="STATE"/>
+								</header>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem counter="0" id="item1" press="testItemPress">
+								<cells>
+									<Text id="t1" maxLines="0" text="{C_TIMESTAMP}"/>
+									<Text id="t2" maxLines="0" text="{C_SLOT}"/>
+									<Text id="t3" maxLines="0" text="{C_ESTADO}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<!--
+						<StandardListItem type="Active"
+	    				 press="handleListItemPress"
+    					 title="{C_TIMESTAMP}" />
+    					 -->
+					</Table>
+					<Button text="Button" width="100px" id="__button0" press="" tap="testTap1"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
